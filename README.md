@@ -2,16 +2,30 @@
 
 A redesigned single-page website for [nexus3cap.com](https://nexus3cap.com), built by Dwight (AI employee) in April 2026. Password-protected for preview/sharing before going live.
 
-## Live Preview
-
-| Version | URL | Notes |
-|---------|-----|-------|
-| **v4 (current)** | https://nexus3-website-v4.netlify.app | Investments labeled + linked, Energy removed |
-| v3 | https://nexus3-website-v3.netlify.app | First version with correct colors + working logo |
-| v2 | https://nexus3-website-v2.netlify.app | Creative redesign attempt |
-| v1 | https://nexus3-website-v1.netlify.app | First attempt (generic) |
+## Live Previews
 
 **Password for all previews:** `n3capital`
+
+### Original (v4)
+| File | URL | Style |
+|------|-----|-------|
+| `index.html` | https://nexus3-website-v4.netlify.app | Editorial — Cormorant Garamond serif, dark, crimson accent |
+
+### Batch 1 — Creative Layouts
+| File | URL | Style |
+|------|-----|-------|
+| `v2.html` | https://nx3-site-v2.netlify.app | **Brutalist Editorial** — white/cream, thick black borders, newspaper grid |
+| `v3.html` | https://nx3-site-v3.netlify.app | **Terminal/Hacker** — pure black, phosphor green, CLI aesthetic, scanlines |
+| `v4.html` | https://nx3-site-v4.netlify.app | **Swiss Modernist** — strict grid, red/black/white only, Bauhaus-inspired |
+| `v5.html` | https://nx3-site-v5.netlify.app | **Dark Luxury/Cinematic** — deep black + gold, diagonal cuts, A24 feel |
+| `v6.html` | https://nx3-site-v6.netlify.app | **Kinetic Editorial Magazine** — off-white/navy, every section different layout |
+
+### Batch 2 — Experimental
+| File | URL | Style |
+|------|-----|-------|
+| `v8.html` | https://nx3-site-v8.netlify.app | **Cinematic Chapters** — full-viewport scroll-snap, each section its own dramatic treatment |
+| `v10.html` | https://nx3-site-v10.netlify.app | **Typographic Manifesto** — type as the only design element, no graphics |
+| `v11.html` | https://nx3-site-v11.netlify.app | **Orbital Timeline** — rotating SVG orbit, sticky circle + scrolling content panel |
 
 ---
 
@@ -190,10 +204,10 @@ The transparent PNG is then base64-encoded and embedded directly in `index.html`
 
 | Version | Date | Change |
 |---------|------|--------|
-| v1 | Apr 14, 2026 | Initial build — dark site, indigo accent, generic layout |
-| v2 | Apr 14, 2026 | Full redesign: editorial concept, serif headlines, marquee |
-| v3 | Apr 14, 2026 | Fixed colors (crimson → matches brand), fixed logo (transparent bg) |
-| v4 | Apr 14, 2026 | Removed Energy Project; investments clearly labeled + linked |
+| v1–v3 | Apr 14, 2026 | Early iterations (pre-repo, discarded) |
+| v4 (index.html) | Apr 14, 2026 | First committed version — editorial design, crimson brand colors |
+| v2–v6 | Apr 14, 2026 | Batch 1: 5 creative layout explorations |
+| v8, v10, v11 | Apr 14, 2026 | Batch 2: 3 experimental formats (chapters, typography, orbital) |
 
 ---
 
