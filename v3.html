@@ -233,7 +233,7 @@ tailwind.config = {
 </div>
 
 <!-- ============ NAVIGATION ============ -->
-<nav id="nav" class="fixed top-0 left-0 right-0 z-40 bg-black/95 backdrop-blur border-b border-green-terminal/20" >
+<nav id="nav" class="fixed top-0 left-0 right-0 z-40 bg-black/95 backdrop-blur border-b border-green-terminal/20" style="display:none;">
   <div class="max-w-7xl mx-auto px-4 sm:px-6">
     <div class="flex items-center justify-between h-14">
       <!-- Left: terminal chrome + logo -->
@@ -269,7 +269,7 @@ tailwind.config = {
 </nav>
 
 <!-- ============ MAIN CONTENT ============ -->
-<div id="main-content" >
+<div id="main-content" style="display:none;">
 
 <!-- ===== HERO ===== -->
 <section class="min-h-screen flex items-center justify-center pt-14 relative overflow-hidden">
@@ -613,6 +613,25 @@ document.getElementById('gate-logo').src = LOGO_DATA;
 document.getElementById('nav-logo').src = LOGO_DATA;
 
 // Password gate
+const HASH = '391eec6bcf144e7468b6d1a6bae4995e4fd0b3925ab0d1d2d81ab1315def08cf';
+async function sha256(str) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+function showSite() {
+  document.getElementById('gate').classList.add('hidden');
+  document.getElementById('nav').style.display = 'flex';
+  document.getElementById('main-content').style.display = 'block';
+}
+if (sessionStorage.getItem('n3auth') === '1') { showSite(); }
+document.getElementById('gate-btn').addEventListener('click', tryLogin);
+document.getElementById('gate-field').addEventListener('keydown', e => { if (e.key === 'Enter') tryLogin(); });
+async function tryLogin() {
+  const field = document.getElementById('gate-field');
+  const h = await sha256(field.value);
+  if (h === HASH) { sessionStorage.setItem('n3auth', '1'); showSite(); }
+  else { field.classList.add('shake'); setTimeout(() => field.classList.remove('shake'), 400); field.value = ''; }
+}
 </script>
 </body>
 </html>
