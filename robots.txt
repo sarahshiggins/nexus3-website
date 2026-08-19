@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Primary sitemap (canonical domain)
+Sitemap: https://nexus3.ai/sitemap.xml
+

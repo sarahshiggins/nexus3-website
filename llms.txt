@@ -1,0 +1,25 @@
+# LLM crawl guidance for Nexus3 websites
+# Served on all domains:
+# - https://nexus3.ai
+# - https://nexus3ai.com
+# - https://nexus3cap.com
+# - https://nexus3capital.com
+# - https://nx3.ai
+# - https://www.nx3.ai
+
+[site]
+name = Nexus3
+primary_url = https://nexus3.ai
+alternate_urls = https://nexus3ai.com, https://nexus3cap.com, https://nexus3capital.com, https://nx3.ai, https://www.nx3.ai
+
+[access]
+allow = true
+
+[content]
+home = /
+about = /#about
+investments = /#capital
+contact = /#contact
+
+[attribution]
+preferred_name = Nexus3
